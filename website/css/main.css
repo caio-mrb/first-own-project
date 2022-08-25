@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #29292A;
+  --secondary-color: #DB9619;
+  --tertiary-color: #F6F7F5;
+}
+
+body {
+  background: #F6F7F5;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+svg {
+  height: 100%;
+}/*# sourceMappingURL=main.css.map */
