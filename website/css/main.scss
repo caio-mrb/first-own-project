@@ -5,7 +5,7 @@
 }
 
 body {
-    background: var(--tertiary-color)
+    background: var(--tertiary-color);
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -14,7 +14,3 @@ body {
     //Background About Pattern
     //background-image: url("data:image/svg+xml,%3Csvg width='62' height='101' viewBox='0 0 62 101' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.353516 0.646484L61.3535 61.6465M0.353516 20.6294L61.3535 81.6294M0.353516 39.6636L61 100' stroke='%23EAEBE9'/%3E%3C/svg%3E%0A");    height: 100vh;
 //}
-
-svg {
-    height: 100%;
-}
