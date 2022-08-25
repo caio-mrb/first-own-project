@@ -5,11 +5,7 @@
 }
 
 body {
-  background: #F6F7F5;
+  background: var(--tertiary-color);
   margin: 0;
   font-family: "Poppins", sans-serif;
-}
-
-svg {
-  height: 100%;
 }/*# sourceMappingURL=main.css.map */
