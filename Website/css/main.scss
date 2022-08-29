@@ -5,6 +5,8 @@
     --quaternary-color: #EAECE8;
     --quinary-color: #52544E;
     --senary-color: #161617;
+    --yellow: #8F5F08;
+    --gray: #4d4e4b;
 }
 
 
@@ -16,14 +18,16 @@ body {
 
 .background-img {
     position: absolute;
-    background: url('../images/BackgroundImg.jpg');
-    transform: translateY(93px);
+    top: 0;
+    background:
+    linear-gradient(to bottom, #29292a93, #29292a67),
+    url('../images/BackgroundImg.jpg');
     background-size: cover;
     //background-position-x: -650px;
     //background-position-y: -170px;
     background-repeat: no-repeat;    
     width: 100%;
-    height: calc(100vh - 93px);
+    height: 1000px;
     z-index: -1;
 }
 
@@ -106,8 +110,10 @@ header {
 
 .hero {
     .container {
-        padding: 15rem 0rem 22rem 6rem;
+        margin: 260px auto 420px 90px;
+        width: fit-content;
     }
+    
 
     h1 {
         font-size: 5rem;
@@ -115,12 +121,18 @@ header {
         margin: 0;
         line-height: 66px;
         color: var(--tertiary-color);
+
+        .first-text {
+            filter: drop-shadow(4px 4px 0px var(--gray));
+        }
+        
         .middle-text {
             font-size: 2.58rem;
-            
+              
         }
         .last-text {
             color: var(--secondary-color);
+            filter: drop-shadow(4px 4px 0px var(--yellow));
         }
         
 
@@ -133,7 +145,7 @@ header {
         border-radius: 10px;
         border: 10px solid var(--secondary-color);
         background: var(--secondary-color);
-        transform: translateX(90px) translateY(20px);
+        margin: 20px auto 0px;
         p {
             margin: 0;
             color: var(--tertiary-color);
@@ -160,16 +172,24 @@ header {
 
 
 .services {
-    margin-top: 35px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     width: 100%;
     text-align: center;
 
     h2 {
         text-transform: uppercase;
         font-size: 2.5rem;
-        margin-bottom: -60px;
+        margin-bottom: -30px;
 
+    }
+
+    .services-line {
+        position: absolute;
+        height: 2000px;
+        width: 10px;
+        
+        margin: -565px 0px 0px -165px;
+        z-index: -1;
     }
 
     .service-item {
@@ -180,12 +200,18 @@ header {
         margin: 20px 50px;
         .icon {
             display: flex;
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 200px;
             border: 5px solid var(--secondary-color);
             justify-content: center;
             align-items: center;
+
+            svg{
+                width: 60px;
+                height: 60px;
+
+            }
             
            
             
@@ -216,6 +242,7 @@ header {
     
     padding: 20px 50px;
     background: var(--quaternary-color);
+    
     .tittle {
         margin-bottom: 30px;
         line-height: 10px;
@@ -224,15 +251,36 @@ header {
     span {
         color: var(--secondary-color);
     }
+
+    form {
+        text-align: right;
+    }
+
+    .request-service-button {
+        background: none;
+        border-radius: 450px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 4px solid var(--secondary-color);
+        color: var(--secondary-color);
+        width: fit-content;
+
+        &:hover {
+            color: var(--tertiary-color);
+            background-color: var(--secondary-color);
+        }
+        
+    }
 }
 
 input, select, textarea {
+    font-family: 'Poppins', sans-serif;
     padding: 20px;
     width: 100%;
     padding: .8em;
     margin-bottom: 1em;
-    border-radius: .3em;
-    border: 1px solid gray;
+    border-radius: .5em;
+    border: none;
     box-sizing: border-box;
 }
 
