@@ -1,17 +1,22 @@
 :root {
-    --primary-color: #29292A;
-    --secondary-color: #DB9619;
-    --tertiary-color: #F6F7F5;
-    --quaternary-color: #EAECE8;
-    --quinary-color: #52544E;
-    --senary-color: #161617;
-    --yellow: #8F5F08;
-    --gray: #4d4e4b;
+    --primary-gray: #29292A;
+    --secondary-gray: #52544E;
+    --tertiary-gray: #4d4e4b;
+
+    --primary-black: #161617;
+
+    --primary-yellow: #DB9619;
+    --secondary-yellow: #8F5F08;
+
+    --primary-white: #F6F7F5;
+    --secondary-white: #EAECE8;
+
+    
 }
 
 
 body {
-    background: var(--tertiary-color);
+    background: var(--primary-white);
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -20,11 +25,9 @@ body {
     position: absolute;
     top: 0;
     background:
-    linear-gradient(to bottom, #29292a93, #29292a67),
+    linear-gradient(to bottom, #29292ac5, #29292a67),
     url('../images/BackgroundImg.jpg');
     background-size: cover;
-    //background-position-x: -650px;
-    //background-position-y: -170px;
     background-repeat: no-repeat;    
     width: 100%;
     height: 1000px;
@@ -38,46 +41,49 @@ nav {
     height: 100vh;
     width: 70%;
     z-index: 2;
-    background-color: var(--quaternary-color);
+    background-color: var(--secondary-white);
+    filter: drop-shadow(0px 0px 5px #29292a28);
     display: none; //Hide the mobile nav
 }
 
 .close-menu-btn {
     float: right;
-    margin: 3rem 2rem;
+    margin: 16px 40px;
     
 }
-
-
 
 ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 6rem;    
+    margin-top: 96px;
     
     a {
-        color: var(--primary-color);
+        color: var(--primary-gray);
         font-size: 1.25rem;
-        padding: 1.3rem 2rem;
+        padding: 21px 32px;
         display: block;
         text-decoration: none;
 
         &:hover {
-            text-decoration: underline var(--secondary-color);
+            text-decoration: underline var(--primary-yellow);
         }
     }
 
     button {
-        width: calc(100% - 4rem);
-        color: var(--quaternary-color);
+        width: calc(100% - 64px);
+        color: var(--secondary-white);
         cursor: pointer;
-        padding: 1.3rem 2rem;
-        margin: 1.3rem 0rem 1.3rem 2rem;
+        padding: 21px 32px;
+        margin: 21px 0px 21px 32px;
         border-radius: 45px;
         font-weight: bold;
-        font-size: 1.25rem;
+        font-size: 20px;
         border: none;
-        background: var(--secondary-color);
+        background: var(--primary-yellow);
+
+        &:hover {
+            filter: grayscale(0.2);
+        }
     }
 
 }
@@ -87,8 +93,8 @@ ul {
 }
 
 header {
-    background: var(--quaternary-color);
-    padding: 1.2rem 2.25rem;
+    background: var(--secondary-white);
+    padding: 19px 36px;
 
     img {
         width: 60px;
@@ -109,9 +115,11 @@ header {
 
 
 .hero {
+    
     .container {
-        margin: 260px auto 420px 90px;
-        width: fit-content;
+        padding: 260px 20px 420px 90px;
+        width: 20px;
+        height: 20px;
     }
     
 
@@ -119,47 +127,63 @@ header {
         font-size: 5rem;
         text-transform: uppercase;
         margin: 0;
+        width: fit-content;
         line-height: 66px;
-        color: var(--tertiary-color);
+        color: var(--primary-white);
 
         .first-text {
-            filter: drop-shadow(4px 4px 0px var(--gray));
+            filter: drop-shadow(4px 5px 0px var(--tertiary-gray));
+            //font-size: calc(20vw - 2rem);
         }
         
         .middle-text {
+            //font-size: calc(20vw - 2rem);
             font-size: 2.58rem;
+            
               
         }
         .last-text {
-            color: var(--secondary-color);
-            filter: drop-shadow(4px 4px 0px var(--yellow));
+            color: var(--primary-yellow);
+            filter: drop-shadow(4px 5px 0px var(--secondary-yellow));
+            //font-size: calc(20vw - 2rem);
         }
         
 
     }
 
     .services-button {
-        display: flex;
+        //display: flex;
         width: fit-content;
         height: fit-content;
         border-radius: 10px;
-        border: 10px solid var(--secondary-color);
-        background: var(--secondary-color);
-        margin: 20px auto 0px;
+        border: 10px solid var(--primary-yellow);
+        background: var(--primary-yellow);
+        margin: 0;
+        //align-items: center;
+        //justify-content: end;
+        animation: stretchLeft 0.3s ease-out 0s 1 normal forwards;
         p {
             margin: 0;
-            color: var(--tertiary-color);
+            color: var(--primary-white);
             text-transform: uppercase;
             font-weight: 700;
             font-size: 1.3rem;
         }
 
         svg {
-            display: none;
+            position: absolute;
+            animation: fadeOut 0.3s ease-out 0s 1 normal forwards;
         }
 
         &:hover {
             cursor: pointer;
+            animation: stretchRight 0.3s ease-out 0s 1 normal forwards;
+            svg {
+               animation: fadeIn 0.3s ease-out 0s 1 normal forwards;
+            }
+            
+            
+            
         }
     }
 }
@@ -185,10 +209,7 @@ header {
 
     .services-line {
         position: absolute;
-        height: 2000px;
-        width: 10px;
-        
-        margin: -565px 0px 0px -165px;
+        left: 102px;
         z-index: -1;
     }
 
@@ -198,19 +219,21 @@ header {
         width: fit-content;
         height: fit-content;
         margin: 20px 50px;
+        
         .icon {
             display: flex;
             width: 100px;
             height: 100px;
+            min-width: 100px;
             border-radius: 200px;
-            border: 5px solid var(--secondary-color);
+            border: 5px solid var(--primary-yellow);
+            background: var(--primary-white);
             justify-content: center;
             align-items: center;
 
             svg{
                 width: 60px;
                 height: 60px;
-
             }
             
            
@@ -226,11 +249,11 @@ header {
         &:hover {
             cursor: pointer;
             .icon {
-                background: var(--secondary-color);
+                background: var(--primary-yellow);
                 
             }
             .icon>svg>path{ /*target the image with css*/
-                fill: var(--quaternary-color);
+                fill: var(--primary-white);
             }
         }
         
@@ -240,20 +263,26 @@ header {
 
 .service-request {
     
-    padding: 20px 50px;
-    background: var(--quaternary-color);
+    padding: 50px;
+    background: var(--secondary-white);
     
     .tittle {
         margin-bottom: 30px;
         line-height: 10px;
+        color: var(--primary-gray);
     }
 
     span {
-        color: var(--secondary-color);
+        color: var(--primary-yellow);
+        text-decoration: underline;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     form {
         text-align: right;
+        color: var(--primary-gray);
     }
 
     .request-service-button {
@@ -261,13 +290,13 @@ header {
         border-radius: 450px;
         font-size: 1rem;
         font-weight: bold;
-        border: 4px solid var(--secondary-color);
-        color: var(--secondary-color);
+        border: 4px solid var(--primary-yellow);
+        color: var(--primary-yellow);
         width: fit-content;
 
         &:hover {
-            color: var(--tertiary-color);
-            background-color: var(--secondary-color);
+            color: var(--secondary-white);
+            background-color: var(--primary-yellow);
         }
         
     }
@@ -286,10 +315,10 @@ input, select, textarea {
 
 .first-baseboard {
     .container {
-        background: var(--primary-color);
-        padding: 2rem 4rem;
+        background: var(--primary-gray);
+        padding: 32px 64px;
         display: grid;
-        grid-template-columns: 100px calc(100% - 8rem);
+        grid-template-columns: 100px calc(100% - 128px);
         grid-template-rows: auto;
         grid-template-areas: 
         "left right-top"
@@ -302,7 +331,7 @@ input, select, textarea {
         width: fit-content;
         height: fit-content;
         margin: 0px 10px;
-        color: var(--tertiary-color);
+        color: var(--primary-white);
         h2 {
             margin: 0;
             text-transform: uppercase;
@@ -328,6 +357,7 @@ input, select, textarea {
     }
     .item.contacts {
         grid-area: right-top;
+        padding-right: 4px;
         .number-email {
             display: grid;
             grid-template-columns: 20px 150px;
@@ -366,6 +396,49 @@ input, select, textarea {
 .second-baseboard {
     padding: 5px 20px;
     font-size: 0.85rem;
-    color: var(--quinary-color);
-    background: var(--senary-color);
+    color: var(--tertiary-gray);
+    background: var(--primary-black);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes stretchRight {
+    0% {
+        padding-right: 0px;
+    }
+    100% {
+        padding-right: 30px;
+    }
+}
+
+@keyframes stretchLeft {
+    0% {
+        padding-right: 30px;
+    }
+    100% {
+        padding-right: 0px;
+    }
 }
