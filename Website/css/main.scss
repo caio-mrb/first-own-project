@@ -187,7 +187,7 @@ header {
         margin: 20px auto;
         align-items: center;
         justify-content: end;
-        animation: stretchLeft 0.3s ease-out 0s 1 normal forwards;
+        transition: padding-right 0.3s ease-out;
         p {
             margin: 0;
             color: var(--primary-white);
@@ -198,14 +198,16 @@ header {
 
         svg {
             position: absolute;
-            animation: fadeOut 0.3s ease-out 0s 1 normal forwards;
+            opacity: 0;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
 
         &:hover {
             cursor: pointer;
-            animation: stretchRight 0.3s ease-out 0s 1 normal forwards;
+            padding-right: 30px;
             svg {
-               animation: fadeIn 0.3s ease-out 0s 1 normal forwards;
+                opacity: 1;
+                transform: translateX(30px);
             }
             
             
@@ -461,49 +463,7 @@ input, select, textarea {
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(0px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(30px);
-    }
-
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(0px);
-    }
-
-}
-
-@keyframes stretchRight {
-    from {
-        padding-right: 0px;
-    }
-    to {
-        padding-right: 30px;
-    }
-}
-
-@keyframes stretchLeft {
-    from {
-        padding-right: 30px;
-    }
-    to {
-        padding-right: 0px;
-    }
-}
-
-@media only screen and (min-width: 807px){
+@media only screen and (min-width: 824px){
 
     .open-menu-btn, .close-menu-btn {
         display: none;
@@ -599,7 +559,7 @@ input, select, textarea {
     .service-request {
 
         display: grid;
-        justify-content: center;
+        justify-items: center;
         grid-template-columns: minmax(20px,1350px);
 
         input, select, textarea {
@@ -610,13 +570,13 @@ input, select, textarea {
             margin: 0;
             display: grid;
             gap: 10px 10px;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: minmax(auto, 150px) minmax(auto, 150px) minmax(auto, 150px) minmax(auto, 150px) minmax(auto, 150px) minmax(auto, 150px);
             grid-template-rows: auto;
             grid-template-areas: 
-            "name name email email"
-            "services services localities date"
-            "message message message message"
-            ". . . button";
+            "name name name email email email"
+            "services services localities localities date date"
+            "message message message message message message"
+            ". . . . . button";
 
             .name {
                 grid-area: name;
@@ -651,14 +611,26 @@ input, select, textarea {
 
     .first-baseboard {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(auto, 1490px);
+
+        }
+
         .container{
+            display: grid;
             grid-template-columns: auto auto auto;
             grid-template-rows: auto;
             grid-template-areas: 
             "left middle right";
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
-            width: 100%;
+            width: fit-content;
+            padding: 0px 35px;
+            margin: 0;
         }
         .item.logo {
             grid-area: left;
@@ -702,6 +674,14 @@ input, select, textarea {
     }
 
     .second-baseboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(auto, 1490px);
+        }
         font-size: 1rem;
     }
 
