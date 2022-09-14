@@ -11,12 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header and footer.css">
 
 </head>
 
 <body>
-
-
     <header>
         <div class="container">
             
@@ -34,7 +33,7 @@
                     <li class="current"><a href="#">Início</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Campanhas</a></li>
-                    <li><a href="#">Contactos</a></li>
+                    <li><a href="/contacts/">Contactos</a></li>
                 </ul>
                 <ul class="secondary-nav">
                     <li><button type="button" class="stroke-button">Orçamento</button><br></li>
@@ -234,59 +233,61 @@
     </section>
 
     <section class="service-request">
-        <div class="container">
-            <div class="tittle">
-                <h2>Pedido de Serviço</h2>
-                <p>O orçamento do serviço é sempre gratuito</p>
+        <div class="grid">
+            <div class="container">
+                <div class="tittle">
+                    <h2>Pedido de Serviço</h2>
+                    <p>O orçamento do serviço é sempre gratuito</p>
+                </div>
+    
+                <form>
+                    <input class="name" type="text" id="name" name="name" placeholder="Nome">
+    
+                    <input class="email" type="email" id="email" name="email" placeholder="Email">
+    
+                    <select class="services-select">
+                        <option value="0">Serviço</option>
+                        <option value="1">Construção Civil</option>
+                        <option value="2">Remodelações</option>
+                        <option value="3">Especialidades</option>
+                        <option value="4">Assistência Técnica</option>
+                    </select>
+    
+                    <select class ="localities">
+                        <option value="0">Localidade</option>
+                        <option value="1">Aveiro</option>
+                        <option value="2">Açores</option>
+                        <option value="3">Beja</option>
+                        <option value="4">Braga</option>
+                        <option value="5">Bragança</option>
+                        <option value="6">Castelo Branco</option>
+                        <option value="7">Coimbra</option>
+                        <option value="8">Évora</option>
+                        <option value="9">Faro</option>
+                        <option value="10">Guarda</option>
+                        <option value="11">Leiria</option>
+                        <option value="12">Lisboa</option>
+                        <option value="13">Madeira</option>
+                        <option value="14">Portalegre</option>
+                        <option value="15">Porto</option>
+                        <option value="16">Santarém</option>
+                        <option value="17">Setúbal</option>
+                        <option value="18">Viana do Castelo</option>
+                        <option value="19">Vila Real</option>
+                        <option value="20">Viseu</option>
+                    </select>
+    
+                    <input class="date" placeholder="Data" type="text" onfocus="(this.type='date')" id="deadline" name="deadline">
+    
+                    <textarea class="message" placeholder="Mensagem" name="message" id="message" cols="20" rows="10"></textarea>
+    
+                    <input type="submit" class="request-service-button" value="Enviar">
+                </form>
+    
+                <p>Não encontrou o que estava a procura?</p>
+                <a href="/">Fale Conosco!</a>
+                
             </div>
-
-            <form>
-                <input class="name" type="text" id="name" name="name" placeholder="Nome">
-
-                <input class="email" type="email" id="email" name="email" placeholder="Email">
-
-                <select class="services-select">
-                    <option value="0">Serviço</option>
-                    <option value="1">Construção Civil</option>
-                    <option value="2">Remodelações</option>
-                    <option value="3">Especialidades</option>
-                    <option value="4">Assistência Técnica</option>
-                </select>
-
-                <select class ="localities">
-                    <option value="0">Localidade</option>
-                    <option value="1">Aveiro</option>
-                    <option value="2">Açores</option>
-                    <option value="3">Beja</option>
-                    <option value="4">Braga</option>
-                    <option value="5">Bragança</option>
-                    <option value="6">Castelo Branco</option>
-                    <option value="7">Coimbra</option>
-                    <option value="8">Évora</option>
-                    <option value="9">Faro</option>
-                    <option value="10">Guarda</option>
-                    <option value="11">Leiria</option>
-                    <option value="12">Lisboa</option>
-                    <option value="13">Madeira</option>
-                    <option value="14">Portalegre</option>
-                    <option value="15">Porto</option>
-                    <option value="16">Santarém</option>
-                    <option value="17">Setúbal</option>
-                    <option value="18">Viana do Castelo</option>
-                    <option value="19">Vila Real</option>
-                    <option value="20">Viseu</option>
-                </select>
-
-                <input class="date" placeholder="Data" type="text" onfocus="(this.type='date')" id="deadline" name="deadline">
-
-                <textarea class="message" placeholder="Mensagem" name="message" id="message" cols="20" rows="10"></textarea>
-
-                <input type="submit" class="request-service-button" value="Enviar">
-            </form>
-
-            <p>Não encontrou o que estava a procura?</p>
-            <a href="/">Fale Conosco!</a>
-            
         </div>
     </section>
 
