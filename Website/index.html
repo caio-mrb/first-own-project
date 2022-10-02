@@ -11,17 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header and footer.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
     <header>
         <div class="container">
-            
+
             <a href="/" class="logo"><img src="/images/DecostLogo.svg" alt="Website Logo"></a>
 
-            
+
             <nav>
                 <svg class="close-menu-btn" width="24" height="26" viewBox="0 0 24 26" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -80,24 +81,24 @@
 
         <h2>Serviços</h2>
 
-        <svg class="services-line" width="5" height="650" viewBox="0 0 5 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="services-line" width="5" height="650" viewBox="0 0 5 640" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <line x1="2.5" y1="50" x2="2.5" y2="640" stroke="#DB9619" stroke-width="5" stroke-linecap="round" />
-        </svg>          
-
-        <svg class= "services-line2" width="479" height="767" viewBox="0 0 479 767" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M435 695C452.5 706 471.5 738 475.5 763.5" stroke="#DB9619" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M301 545.5C301 554.5 312.5 578.5 330.5 581.5" stroke="#DB9619" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M238 366.5C257.914 374.3 266.233 389.457 269.5 400.5" stroke="#DB9619" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M114 203C114 216.5 130.5 233.5 145.5 239" stroke="#DB9619" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 3C32 16 51 36 61 61" stroke="#DB9619" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        
+
+        <img class="services-line2" src="images/Line2/Line2.1.svg">
+        <img class="services-line2 two" src="images/Line2/Line2.2.svg">
+        <img class="services-line2 three" src="images/Line2/Line2.3.svg">
+        <img class="services-line2 four" src="images/Line2/Line2.4.svg">
+        <img class="services-line2 five" src="images/Line2/Line2.5.svg">
+
         <div class="services-list">
             <ul>
                 <li>
                     <div class="service-item build">
                         <div class="icon building">
-                            <svg width="73" height="74" viewBox="0 0 73 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="73" height="74" viewBox="0 0 73 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M57.1637 73.71H32.1683V14.0379L56.7237 0L57.1637 73.71ZM34.3686 71.5097H54.9194L54.5674 3.78451L34.3686 15.3141V71.5097Z"
                                     fill="#DB9619" />
@@ -163,11 +164,12 @@
                         <p>Construção Civil</p>
                     </div>
                 </li>
-    
+
                 <li>
                     <div class="service-item refurbishments">
                         <div class="icon refurbishments">
-                            <svg width="76" height="72" viewBox="0 0 76 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="76" height="72" viewBox="0 0 76 72" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M73.3673 65.2973C67.283 57.2445 51.4012 37.739 51.2222 37.5153C51.1775 37.4706 51.1328 37.4258 51.088 37.3811C49.4775 35.86 46.838 35.5021 44.1984 36.5311C44.1984 36.5311 44.1984 36.5311 44.1537 36.5311C43.5721 36.7548 38.3826 39.1706 32.5667 41.8548L34.1325 31.1626C35.922 29.0152 35.7431 25.7941 33.6404 23.8704L9.34794 1.41215C7.20054 -0.556301 3.80049 -0.466826 1.7873 1.68057L1.74257 1.77005C0.758341 2.79901 0.266228 4.14114 0.310966 5.57273C0.355703 7.00433 0.982028 8.30172 2.01099 9.24121L26.3482 31.6994C27.3771 32.6389 28.6745 33.131 30.0167 33.131C30.2851 33.131 30.5088 33.0863 30.7772 33.0863L29.1666 43.5101C22.3665 46.6418 15.7454 49.7286 15.1638 49.9971C15.0296 50.0418 14.9401 50.1313 14.8506 50.2207C13.6875 51.1602 13.1954 52.1892 13.3296 53.2629C13.4638 54.3813 14.2691 55.2761 15.7454 55.9471C15.7901 55.9471 15.8349 55.9919 15.8796 55.9919C17.6244 56.6182 64.3303 69.4579 69.5646 70.8895C70.9067 71.2921 72.1594 71.65 73.1883 71.65C74.0831 71.65 74.7989 71.3816 75.2463 70.7105C76.32 69.1447 75.0226 67.4447 73.3673 65.2973ZM28.4956 29.3731L4.15839 6.91486C3.75575 6.51222 3.48733 5.97537 3.44259 5.43852C3.39785 4.85694 3.62154 4.32009 4.02418 3.87271C4.47155 3.42534 5.05314 3.15691 5.67946 3.15691C6.21631 3.15691 6.7979 3.33586 7.20054 3.7385L31.5377 26.1967C31.9404 26.5994 32.2088 27.1362 32.2535 27.6731C32.2983 28.2546 32.0746 28.7915 31.6719 29.2389L31.6272 29.2836C30.8219 30.1784 29.3903 30.2231 28.4956 29.3731ZM70.4146 67.8473C56.1881 63.9104 19.1902 53.7103 16.9533 52.9945C16.8191 52.905 16.6849 52.8603 16.5954 52.8155C16.6402 52.7708 16.6401 52.7708 16.6849 52.7261C24.4692 49.1023 44.1537 39.9759 45.3616 39.4838C46.7932 38.9469 48.1801 38.9916 48.8959 39.618C50.0591 41.0496 65.0461 59.4814 70.862 67.221C71.0409 67.4447 71.3094 67.8026 71.5778 68.1605C71.2646 68.071 70.862 67.9815 70.4146 67.8473Z"
                                     fill="#DB9619" />
@@ -176,12 +178,13 @@
                         <p>Remodelações</p>
                     </div>
                 </li>
-    
-    
+
+
                 <li>
                     <div class="service-item specialties">
                         <div class="icon specialties">
-                            <svg width="60" height="76" viewBox="0 0 60 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="60" height="76" viewBox="0 0 60 76" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M58.6493 8.76369C58.3382 8.45256 57.9752 8.29699 57.5603 8.29699H45.9964L38.4773 0.466706C38.4254 0.41485 38.3736 0.362992 38.3217 0.311136L38.2699 0.259281C38.0106 0.103712 37.6994 0 37.3883 0H1.55569C0.67413 0 0 0.67413 0 1.55569V65.8573C0 66.7389 0.67413 67.413 1.55569 67.413H5.70418V74.1543C5.70418 74.5692 5.85975 74.984 6.17088 75.2433C6.48202 75.5544 6.84501 75.71 7.25986 75.71H57.3011C58.1826 75.71 58.8567 75.0359 58.8567 74.1543L59.116 9.85267C59.116 9.43782 58.9605 9.02297 58.6493 8.76369ZM38.8921 5.39304L46.6706 13.4826H38.8921V5.39304ZM3.11137 64.3016V3.11137H35.7808V15.0383C35.7808 15.9198 36.4549 16.594 37.3364 16.594H48.7448V64.3016H3.11137ZM55.7972 72.5986H8.81555V67.413H50.3005C51.182 67.413 51.8562 66.7389 51.8562 65.8573V15.0383C51.8562 14.6234 51.7006 14.2604 51.4413 13.9493L49.0041 11.4084H56.0047L55.7972 72.5986Z"
                                     fill="#DB9619" />
@@ -208,11 +211,12 @@
                         <p>Especialidades</p>
                     </div>
                 </li>
-    
+
                 <li>
                     <div class="service-item technical-assistance">
                         <div class="icon technical-assistance">
-                            <svg width="76" height="74" viewBox="0 0 76 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="76" height="74" viewBox="0 0 76 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M23.7582 47.3153C23.1503 46.7074 22.1878 46.7074 21.6306 47.3153L7.90251 61.0434C7.29462 61.6512 7.29462 62.6137 7.90251 63.171L8.25711 63.5256C8.56105 63.8295 8.91565 63.9815 9.3209 63.9815C9.72616 63.9815 10.1314 63.8295 10.3847 63.5256L24.1128 49.7975C24.4167 49.4935 24.5687 49.1389 24.5687 48.7337C24.5687 48.3284 24.4167 47.9232 24.1128 47.6699L23.7582 47.3153Z"
                                     fill="#DB9619" />
@@ -228,7 +232,7 @@
 
         </div>
 
-        
+
         </div>
     </section>
 
@@ -239,12 +243,12 @@
                     <h2>Pedido de Serviço</h2>
                     <p>O orçamento do serviço é sempre gratuito</p>
                 </div>
-    
+
                 <form>
                     <input class="name" type="text" id="name" name="name" placeholder="Nome">
-    
+
                     <input class="email" type="email" id="email" name="email" placeholder="Email">
-    
+
                     <select class="services-select">
                         <option value="0">Serviço</option>
                         <option value="1">Construção Civil</option>
@@ -252,8 +256,8 @@
                         <option value="3">Especialidades</option>
                         <option value="4">Assistência Técnica</option>
                     </select>
-    
-                    <select class ="localities">
+
+                    <select class="localities">
                         <option value="0">Localidade</option>
                         <option value="1">Aveiro</option>
                         <option value="2">Açores</option>
@@ -276,17 +280,21 @@
                         <option value="19">Vila Real</option>
                         <option value="20">Viseu</option>
                     </select>
-    
-                    <input class="date" placeholder="Data" type="text" onfocus="(this.type='date')" id="deadline" name="deadline">
-    
-                    <textarea class="message" placeholder="Mensagem" name="message" id="message" cols="20" rows="10"></textarea>
-    
+
+                    <input class="date" placeholder="Data limite desejada" type="text" onfocus="(this.type='date')" id="deadline"
+                        name="deadline">
+
+                    <textarea class="message" placeholder="Mensagem" name="message" id="message" cols="20"
+                        rows="10"></textarea>
+
+                    <div class="g-recaptcha" data-sitekey="6Le7NEwiAAAAAFHBrlUXknVEmx73ZlYRnMxHd0x2"></div>
+
                     <input type="submit" class="request-service-button" value="Enviar">
                 </form>
-    
+
                 <p>Não encontrou o que estava a procura?</p>
                 <a href="/">Fale Conosco!</a>
-                
+
             </div>
         </div>
     </section>
@@ -312,7 +320,7 @@
                         </svg>
                         <h1>DECOST</h1>
                     </div>
-    
+
                     <div class="item address">
                         <h2>Morada</h2>
                         <p>Av. Visconde do Amparo 22<br>2415-474, Marrazes, Leiria</p>
@@ -339,7 +347,7 @@
                             <p class="email-address">orcamentos@decost.pt</p>
                         </div>
                     </div>
-    
+
                     <!--
                     <div class="left-items">
                         <div class="item address">
@@ -371,15 +379,15 @@
                     </div>
                     
                     -->
-                    
-    
+
+
                 </div>
             </div>
-            
+
         </section>
-    
+
         <section class="second-baseboard">
-            <div class="grid">                
+            <div class="grid">
                 <p>© 2022 DECOST Engenharia, Lda | Todos os direitos reservados</p>
             </div>
         </section>
@@ -389,14 +397,14 @@
     const menu = document.querySelector('.open-menu-btn')
     const close = document.querySelector('.close-menu-btn')
     const nav = document.querySelector('nav')
-    
-    menu.addEventListener('click', () =>{
+
+    menu.addEventListener('click', () => {
         nav.classList.add('open-nav')
     },
-    close.addEventListener('click', () =>{
-        nav.classList.remove('open-nav')
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
 
-    })
+        })
     )   
 </script>
 
