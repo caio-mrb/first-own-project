@@ -78,6 +78,7 @@ ul button:hover {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
+  align-items: center;
   grid-template-areas: "left top-right" "left bottom-right";
   justify-content: space-around;
   margin: 5px 30px;
@@ -96,28 +97,27 @@ ul button:hover {
 .first-baseboard .item h2 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 4vw;
 }
 .first-baseboard .item p {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 2vw;
 }
 .first-baseboard .item.logo {
   grid-area: left;
   display: block;
   text-align: center;
   margin-right: 20px;
-  margin-top: 10px;
 }
 .first-baseboard .item.logo svg {
-  width: 100px;
+  width: 25vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 .first-baseboard .item.logo h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 5vw;
 }
 .first-baseboard .item.contacts {
   grid-area: top-right;
@@ -157,7 +157,7 @@ ul button:hover {
   background: var(--primary-black);
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 638px) {
   .first-baseboard {
     display: flex;
     justify-content: center;
@@ -165,17 +165,19 @@ ul button:hover {
   }
   .first-baseboard .grid {
     display: grid;
-    grid-template-columns: minmax(auto, 1490px);
+    grid-template-columns: minmax(auto, 1200px);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
   .first-baseboard .container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto minmax(auto, 600px) auto;
     grid-template-rows: auto;
     grid-template-areas: "left middle right";
-    justify-content: flex-start;
+    place-self: center;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -194,7 +196,7 @@ ul button:hover {
     height: fit-content;
   }
   .first-baseboard .item.logo svg {
-    width: 128px;
+    width: 8rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -210,10 +212,10 @@ ul button:hover {
     height: fit-content;
   }
   .first-baseboard .item h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .first-baseboard .item p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .first-baseboard .item.address {
     grid-area: middle;
@@ -229,7 +231,7 @@ ul button:hover {
   }
   .second-baseboard .grid {
     display: grid;
-    grid-template-columns: minmax(auto, 1490px);
+    grid-template-columns: minmax(auto, 1000px);
   }
 }
 @media only screen and (min-width: 824px) {
@@ -245,7 +247,7 @@ ul button:hover {
   }
   header .container {
     display: grid;
-    grid-template-columns: minmax(0px, 100px) minmax(auto, 1350px);
+    grid-template-columns: minmax(0px, 100px) minmax(auto, 900px);
     justify-content: unset;
     margin: 0;
   }
@@ -298,5 +300,14 @@ ul button:hover {
     filter: none;
     color: var(--primary-white);
     background: var(--primary-yellow);
+  }
+  .first-baseboard .item svg {
+    width: 20px;
+  }
+  .first-baseboard .item h2 {
+    font-size: 2rem;
+  }
+  .first-baseboard .item p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=header-footer.css.map */

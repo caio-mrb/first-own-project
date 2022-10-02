@@ -87,6 +87,7 @@ ul {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
+        align-items: center;
         grid-template-areas: 
         "left top-right"
         "left bottom-right";
@@ -103,11 +104,11 @@ ul {
         h2 {
             margin: 0;
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 4vw;
         }
         p {
             margin: 0;
-            font-size: 0.7rem;
+            font-size: 2vw;
         }
     }
     
@@ -116,14 +117,14 @@ ul {
         display: block;
         text-align: center;
         margin-right: 20px;
-        margin-top: 10px;
         svg {
-            width: 100px;
+            width: 25vw;
             height: fit-content;
+            
         }
         h1 {
             margin: 0;
-            font-size: 1.25rem;
+            font-size: 5vw;
             
         }
     }
@@ -137,6 +138,7 @@ ul {
         grid-area: top-right;
         display: block;
         padding-right: 4px;
+        
         
         .number-email {
             display: grid;
@@ -182,7 +184,7 @@ ul {
 }
 
 
-@media only screen and (min-width: 720px){
+@media only screen and (min-width: 638px){
 
     .first-baseboard {
         display: flex;
@@ -191,18 +193,20 @@ ul {
         
         .grid {
             display: grid;
-            grid-template-columns: minmax(auto, 1490px);
+            grid-template-columns: minmax(auto, 1200px);
             width: fit-content;
 
         }
 
         .container{
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto minmax(auto, 600px) auto;
             grid-template-rows: auto;
             grid-template-areas: 
             "left middle right";
-            justify-content: flex-start;
+            place-self: center;
+            justify-content: center;
+            justify-items: center;
             align-items: center;
             width: fit-content;
             padding: 0px 35px;
@@ -214,7 +218,7 @@ ul {
             width: fit-content;
             height: fit-content;
             svg {
-                width: 128px;
+                width: 8rem;
                 height: fit-content;
             }
             h1 {
@@ -231,10 +235,10 @@ ul {
             }
 
             h2{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             p{
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
 
         }
@@ -245,6 +249,7 @@ ul {
 
         .item.contacts {
             grid-area: right;
+            
         }
 
     }
@@ -256,11 +261,19 @@ ul {
         
         .grid {
             display: grid;
-            grid-template-columns: minmax(auto, 1490px);
+            grid-template-columns: minmax(auto, 1000px);
         }
         font-size: 1rem;
     }
 }
+
+@media only screen and (min-width: 824px){
+
+
+
+}
+
+
 
 @media only screen and (min-width: 824px){
 
@@ -279,7 +292,7 @@ ul {
 
         .container {
             display: grid;
-            grid-template-columns: minmax(0px, 100px) minmax(auto, 1350px);
+            grid-template-columns: minmax(0px, 100px) minmax(auto, 900px);
             justify-content: unset;
             margin: 0;
 
@@ -342,8 +355,23 @@ ul {
         }
     }
 
-    
+    .first-baseboard {
 
-    
+        .item {
+
+            svg {
+                width: 20px;
+
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+    }
 
 }

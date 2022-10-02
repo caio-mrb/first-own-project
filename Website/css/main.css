@@ -80,9 +80,11 @@ header .container .open-menu-btn {
   filter: drop-shadow(4px 5px 0px var(--tertiary-gray));
 }
 .hero h1 .middle-text {
+  transform: translateY(-200px);
   font-size: 2.58rem;
 }
 .hero h1 .last-text {
+  font-size: 5.1rem;
   color: var(--primary-yellow);
   filter: drop-shadow(4px 5px 0px var(--secondary-yellow));
 }
@@ -124,7 +126,7 @@ header .container .open-menu-btn {
 }
 
 .services {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   width: 100%;
   text-align: center;
 }
@@ -142,7 +144,7 @@ header .container .open-menu-btn {
   z-index: -1;
 }
 .services .services-line2 {
-  display: none;
+  opacity: 0;
   position: absolute;
 }
 .services .service-item {
@@ -155,7 +157,7 @@ header .container .open-menu-btn {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 .services .service-item .icon {
   display: flex;
@@ -167,10 +169,11 @@ header .container .open-menu-btn {
   background: var(--primary-white);
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .services .service-item .icon svg {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
 }
 .services .service-item p {
   text-transform: uppercase;
@@ -209,7 +212,7 @@ header .container .open-menu-btn {
   cursor: pointer;
 }
 .service-request form {
-  text-align: right;
+  text-align: left;
   color: var(--primary-gray);
 }
 .service-request .request-service-button {
@@ -220,9 +223,10 @@ header .container .open-menu-btn {
   font-weight: bold;
   border: 4px solid var(--primary-yellow);
   color: var(--primary-yellow);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .service-request .request-service-button:hover {
   color: var(--secondary-white);
@@ -240,7 +244,7 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 550px) {
   .hero {
     justify-content: left;
     text-align: left;
@@ -258,7 +262,7 @@ input, select, textarea {
   }
   .service-request .grid {
     display: grid;
-    grid-template-columns: minmax(auto, 1200px);
+    grid-template-columns: minmax(auto, 800px);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -298,30 +302,58 @@ input, select, textarea {
   }
 }
 @media only screen and (min-width: 1020px) {
+  .hero h1 {
+    font-size: 6rem;
+    line-height: 76px;
+  }
+  .hero h1 .middle-text {
+    font-size: 3.1rem;
+  }
+  .hero h1 .last-text {
+    font-size: 6.1rem;
+  }
+  .hero .container {
+    padding-left: 30vw;
+  }
+  .services {
+    margin-bottom: 0px;
+  }
   .services .services-line {
     display: none;
   }
   .services .services-line2 {
-    display: block;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 650px;
-    transform: translateX(230px) translateY(60px);
-    z-index: -1;
+    opacity: 1;
+    display: absolute;
+    width: 250px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    transform: translateX(-480px) translateY(10px);
+  }
+  .services .services-line2.two {
+    transform: translateX(-365px) translateY(180px);
+  }
+  .services .services-line2.three {
+    transform: translateX(-230px) translateY(297px);
+  }
+  .services .services-line2.four {
+    transform: translateX(-115px) translateY(430px) rotate(-5deg);
+  }
+  .services .services-line2.five {
+    transform: translateX(20px) translateY(560px);
   }
   .services .services-list {
-    margin: 20px 20%;
+    margin: 50px 20px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-100px);
   }
   .services li {
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(auto, 80px) minmax(auto, 80px) minmax(auto, 80px) minmax(auto, 80px);
+    grid-template-columns: 120px 120px 120px 120px;
     grid-template-rows: auto;
     grid-template-areas: "build . . ." ". refurbishments . ." ". . specialties ." ". . . technical-assistance";
-  }
-  .services .service-item {
-    margin: 10px;
   }
   .services .service-item.build {
     grid-area: build;

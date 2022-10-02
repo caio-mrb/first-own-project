@@ -103,11 +103,13 @@ header {
         
         .middle-text {
             //font-size: calc(20vw - 2rem);
+            transform: translateY(-200px);
             font-size: 2.58rem;
             
               
         }
         .last-text {
+            font-size: 5.1rem;
             color: var(--primary-yellow);
             filter: drop-shadow(4px 5px 0px var(--secondary-yellow));
             //font-size: calc(20vw - 2rem);
@@ -166,7 +168,7 @@ header {
 
 
 .services {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     width: 100%;
     text-align: center;
 
@@ -188,7 +190,7 @@ header {
     }
 
     .services-line2 {
-        display: none;
+        opacity: 0;
         position: absolute;
     }
 
@@ -198,7 +200,7 @@ header {
         text-align: left;
         width: fit-content;
         height: fit-content;
-        margin: 20px auto;
+        margin: 0px auto;
         
         .icon {
             display: flex;
@@ -210,10 +212,11 @@ header {
             background: var(--primary-white);
             justify-content: center;
             align-items: center;
+            margin-bottom: 20px;
 
-            svg{
-                width: 60px;
-                height: 60px;
+            svg {
+                width: 65px;
+                height: 65px;
             }
             
            
@@ -267,9 +270,10 @@ header {
     }
 
     form {
-        text-align: right;
+        text-align: left;
         color: var(--primary-gray);
     }
+    
 
     .request-service-button {
         background: none;
@@ -279,7 +283,8 @@ header {
         font-weight: bold;
         border: 4px solid var(--primary-yellow);
         color: var(--primary-yellow);
-        width: fit-content;
+        width: 100px;
+        height: fit-content;
 
         &:hover {
             color: var(--secondary-white);
@@ -300,7 +305,7 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
-@media only screen and (min-width: 670px){
+@media only screen and (min-width: 550px){
 
     .hero {
         justify-content: left;
@@ -323,7 +328,7 @@ input, select, textarea {
         
         .grid {
             display: grid;
-            grid-template-columns: minmax(auto, 1200px);
+            grid-template-columns: minmax(auto, 800px);
             width: fit-content;
 
         }
@@ -381,28 +386,76 @@ input, select, textarea {
 
 @media only screen and (min-width: 1020px){
 
+    .hero {
+        h1 {
+            font-size: 6rem;
+            line-height: 76px;
+
+            .middle-text {
+                font-size: 3.1rem;
+            }
+
+            .last-text {
+                font-size: 6.1rem;
+            }
+        }
+
+        .container {
+            padding-left: 30vw;
+        }
+
+        
+    }
+
     .services {
+
+        margin-bottom: 0px;
         .services-line {
             display: none;
         }
     
         .services-line2 {
-            display: block;
-            width: fit-content;
-            height: 650px;
-            transform: translateX(230px) translateY(60px);
-            z-index: -1;
+            opacity: 1;
+            display: absolute;
+            width: 250px;
+            height: fit-content;
+            transform: translateX(-480px) translateY(10px);
     
         }
 
+        .services-line2.two {
+            transform: translateX(-365px) translateY(180px);
+    
+        }
+        
+        .services-line2.three {
+            transform: translateX(-230px) translateY(297px);
+    
+        }
+
+        .services-line2.four {
+            transform: translateX(-115px) translateY(430px) rotate(-5deg);
+            
+    
+        }
+
+        .services-line2.five {
+            transform: translateX(20px) translateY(560px);
+    
+        }
+
+
         .services-list {
-            margin: 20px 20%;
+            margin: 50px 20px;
+            display: flex;
+            justify-content: center;
+            transform: translateX(-100px);
         }
 
         li {
             display: grid;
             align-items: center;
-            grid-template-columns: minmax(auto, 80px) minmax(auto, 80px) minmax(auto, 80px) minmax(auto, 80px);
+            grid-template-columns: 120px 120px 120px 120px;
             grid-template-rows: auto;
             grid-template-areas: 
             "build . . ."
@@ -413,7 +466,6 @@ input, select, textarea {
         }
 
         .service-item {
-            margin: 10px;
         }
 
         .service-item.build {
