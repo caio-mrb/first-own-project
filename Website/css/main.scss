@@ -10,10 +10,7 @@
 
     --primary-white: #F6F7F5;
     --secondary-white: #EAECE8;
-
-
-    --max-height-per-section: 872px;
-
+    
     
 }
 
@@ -39,7 +36,7 @@ body {
     //background-repeat: no-repeat;    
     width: 100%;
     min-width: 380px;
-    height: var(--max-height-per-section);
+    height: 750px;
     z-index: -1;
 }
 
@@ -82,10 +79,10 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: var(--max-height-per-section);  
+    height: 750px;  
     
     .container {
-        padding-top: 250px;
+        padding-top: 200px;
     }
 
     h1 {
